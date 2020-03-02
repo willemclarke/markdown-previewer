@@ -30,10 +30,10 @@ export const App: React.FC = () => {
               padding: "20px 10px 20px 20px"
             }}
           >
-            <Card style={{ width: "500px", height: "700px", backgroundColor: "white", margin: "0px" }}>Cock</Card>
+            <Card style={{ width: "500px", height: "700px", backgroundColor: "white", margin: "0px" }}>Col1</Card>
           </Col>
           <Col span={12} style={{ background: "red", backgroundColor: "#e6f2f2", padding: "20px 20px 20px 10px" }}>
-            <Card style={{ width: "500px", height: "700px", backgroundColor: "white", margin: "0px" }}>Cock</Card>
+            <Card style={{ width: "500px", height: "700px", backgroundColor: "white", margin: "0px" }}>Col2</Card>
           </Col>
         </Row>
       </Content>
