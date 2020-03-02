@@ -1,6 +1,6 @@
 ## markdown-previewer challenge
 
-### My version of [florinpop17 app ideas (Markdown Previewer)](https://github.com/florinpop17/app-ideas/blob/master/Projects/2-Intermediate/GitHub-Profiles.md)
+### My version of [florinpop17 app ideas (Markdown Previewer)](https://github.com/florinpop17/app-ideas/blob/master/Projects/2-Intermediate/Markdown-Previewer.md)
 
 Solo project to further improve my React and Typescript skills!
 
