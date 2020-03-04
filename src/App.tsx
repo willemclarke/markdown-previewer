@@ -1,39 +1,52 @@
 import React from "react";
 import * as _ from "lodash";
 
-import { Row, Col, Card } from "antd";
+import { Row, Col } from "antd";
 import { Layout } from "antd";
+import { MarkdownInput } from "./components/MarkdownInput";
+import { HtmlPreview } from "./components/HtmlPreview";
 
 const { Header, Content } = Layout;
 
 export const App: React.FC = () => {
+  const [markdown, setMarkdown] = React.useState(``);
+
   return (
-    <Layout style={{ backgroundColor: "#cddddd", height: "100vh" }}>
+    <Layout style={{ backgroundColor: "#fcba12", height: "100vh" }}>
       <Header
         style={{
+          backgroundColor: "#fcba12",
           display: "flex",
           justifyContent: "center",
-          paddingTop: "40px",
+          paddingTop: "10px",
           fontFamily: "Trocchi, serif",
-          fontSize: "3rem"
+          fontSize: "3rem",
+          color: "white"
         }}
       >
-        Markdown Previewer
+        Markdown Live Preview
       </Header>
-      <Content>
-        <Row style={{ display: "flex", justifyContent: "center", paddingTop: "40px" }}>
+      <Content style={{ paddingTop: "10px" }}>
+        <Row style={{ paddingTop: "10px", height: "100%" }}>
           <Col
             span={12}
             style={{
-              background: "red",
-              backgroundColor: "#e6f2f2",
-              padding: "20px 10px 20px 20px"
+              background: "#dba212",
+              padding: "20px 20px 20px 20px",
+              height: "100%"
             }}
           >
-            <Card style={{ width: "500px", height: "700px", backgroundColor: "white", margin: "0px" }}>Col1</Card>
+            <MarkdownInput setMarkdown={setMarkdown} />
           </Col>
-          <Col span={12} style={{ background: "red", backgroundColor: "#e6f2f2", padding: "20px 20px 20px 10px" }}>
-            <Card style={{ width: "500px", height: "700px", backgroundColor: "white", margin: "0px" }}>Col2</Card>
+          <Col
+            span={12}
+            style={{
+              background: "#dba212",
+              padding: "20px 20px 20px 20px",
+              height: "100%"
+            }}
+          >
+            <HtmlPreview markdown={markdown} />
           </Col>
         </Row>
       </Content>
