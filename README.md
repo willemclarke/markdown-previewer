@@ -12,3 +12,7 @@ Solo project to further improve my React and Typescript skills!
   - User can see the resulting HTML updated automatically when the markdown textarea is changed
   - When closing the browser window the markdown formatted text will be stored in localStorage and when the User returns, the data will be retrieved and displayed
   - User can click a button and the content of the box is saved to the clipboard
+
+<p float="left">
+  <img src="https://i.gyazo.com/445a53fcebeb7fab529768c4c75b2dce.png">
+</p>

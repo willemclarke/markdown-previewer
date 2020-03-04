@@ -12,7 +12,7 @@ export const HtmlPreview = (props: Props): JSX.Element => {
   const { markdown } = props;
 
   return (
-    <Card style={{ height: "100%", borderRadius: "7.5px" }}>
+    <Card style={{ height: "100%", width: "100%", borderRadius: "7.5px", overflow: "auto" }}>
       <Markdown>{markdown}</Markdown>
     </Card>
   );
