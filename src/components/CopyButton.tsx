@@ -9,7 +9,12 @@ interface Props {
 export const CopyButton = (props: Props): JSX.Element => {
   const { onCopy } = props;
   return (
-    <Button icon={<CopyOutlined />} onClick={onCopy} style={{ width: "100%", borderRadius: "10px", fontSize: "1rem" }}>
+    <Button
+      size={"large"}
+      icon={<CopyOutlined style={{ fontSize: "1.1rem" }} />}
+      onClick={onCopy}
+      style={{ width: "100%", borderRadius: "10px", fontSize: "1.1rem" }}
+    >
       Copy Markdown
     </Button>
   );

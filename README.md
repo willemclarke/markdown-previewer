@@ -14,5 +14,5 @@ Solo project to further improve my React and Typescript skills!
   - User can click a button and the content of the box is saved to the clipboard
 
 <p float="left">
-  <img src="https://i.gyazo.com/445a53fcebeb7fab529768c4c75b2dce.png">
+  <img src="https://i.gyazo.com/93bb80cefc924a10f5be78f2984f10c5.png">
 </p>

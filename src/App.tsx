@@ -28,15 +28,18 @@ export const App: React.FC = () => {
           backgroundColor: "#444444",
           display: "flex",
           justifyContent: "center",
-          paddingTop: "5px",
-          fontFamily: "Trocchi, serif",
+          paddingBottom: "10px",
+          fontFamily: "Poppins",
+          fontWeight: "bold",
+          letterSpacing: "1px",
           fontSize: "2.5rem",
-          color: "white"
+          color: "white",
+          height: "45px"
         }}
       >
         Markdown Live Preview
       </Header>
-      <Content style={{ paddingTop: "5px", paddingBottom: "10px" }}>
+      <Content style={{ padding: "10px 0px 10px 0px" }}>
         <Row style={{ paddingTop: "5px", height: "100%" }}>
           <Col span={5} />
           <Col
@@ -64,7 +67,7 @@ export const App: React.FC = () => {
           <Col span={5} />
         </Row>
         <Row justify={"center"} style={{ padding: "10px 0px 0px 0px" }}>
-          <Col span={14}>
+          <Col span={14} style={{}}>
             <CopyButton onCopy={onCopy} />
           </Col>
         </Row>
