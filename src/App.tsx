@@ -4,6 +4,8 @@ import * as _ from "lodash";
 
 import { MarkdownInput } from "./components/MarkdownInput";
 import { HtmlPreview } from "./components/HtmlPreview";
+import { CopyButton } from "./components/CopyButton";
+import { useClipboard } from "use-clipboard-copy";
 import { initialMarkdownState } from "./constants";
 
 import { Row, Col } from "antd";
@@ -13,6 +15,11 @@ const { Header, Content, Footer } = Layout;
 
 export const App: React.FC = () => {
   const [markdown, setMarkdown] = useLocalStorage("markdown", initialMarkdownState);
+  const clipboard = useClipboard();
+
+  const onCopy = React.useCallback(() => {
+    clipboard.copy(markdown); // programmatically copying a value
+  }, [clipboard.copy]);
 
   return (
     <Layout style={{ backgroundColor: "#444444", height: "100vh" }}>
@@ -41,7 +48,7 @@ export const App: React.FC = () => {
               borderRadius: "10px"
             }}
           >
-            <MarkdownInput markdown={markdown} setMarkdown={setMarkdown} />
+            <MarkdownInput clipboardRef={clipboard.target} markdown={markdown} setMarkdown={setMarkdown} />
           </Col>
           <Col
             span={7}
@@ -56,11 +63,17 @@ export const App: React.FC = () => {
           </Col>
           <Col span={5} />
         </Row>
+        <Row justify={"center"} style={{ padding: "10px 0px 0px 0px" }}>
+          <Col span={14}>
+            <CopyButton onCopy={onCopy} />
+          </Col>
+        </Row>
       </Content>
       <Footer
         style={{
           backgroundColor: "#444444",
-          paddingBottom: "10px"
+          width: "100%",
+          height: "64px"
         }}
       />
     </Layout>

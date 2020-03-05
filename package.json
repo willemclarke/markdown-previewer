@@ -9,7 +9,8 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-scripts": "3.4.0",
-    "react-use-localstorage": "^3.4.1"
+    "react-use-localstorage": "^3.4.1",
+    "use-clipboard-copy": "^0.1.2"
   },
   "scripts": {
     "start": "react-scripts start",
